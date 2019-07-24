@@ -24,17 +24,19 @@
     </thead>
     <?php
 	$posts = $block->getPosts();
-	$_objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-	$imageHelper  = $_objectManager->get('\Magento\Catalog\Helper\Image');
+	// $_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); TODO: lay truc tiep
+	// $imageHelper  = $_objectManager->get('\Magento\Catalog\Helper\Image');
     foreach ($posts as $post) {
- 		$image_url = $imageHelper->init($post, 'product_thumbnail_image')->setImageFile($post->getFile())->resize(50, 50)->getUrl();
+		//  $image_url = $imageHelper->init($post, 'product_thumbnail_image')
+		//  ->setImageFile($post->getFile())
+		//  ->resize(50, 50)->getUrl();
     	echo "<tr style=\"border: 1px solid #dddddd; text-align: left; padding: 8px;\">";
     	echo "<td>".$post->getId()."</td>";
     	echo "<td>".$post->getName()."</td>";
 		echo "<td>".$post->getUrlKey()."</td>";
-    	echo "<td><img src='".$image_url."'></td>";
+    	echo "<td><img src='".$block->getImage_url($post)."'></td>";
 		// echo "<td>".$post->getContent()."</td>";
-    	echo "<td>".$post->getType()."</td>";
+    	echo "<td>".$post->getTypeId()."</td>";
     	echo "<td>".$post->getStatus()."</td>";
     	echo "<td>".$post->getCreatedAt()."</td>";
     	echo "<td>".$post->getUpdatedAt()."</td>";

@@ -23,7 +23,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
         $this->_blockGroup = 'AHT_Blog';
 
         parent::_construct();
-        //TODO: thêm nút SAVE and continue tước đó đã có nút back,delete  và reset trong form sẵn rồi 
+        //TODO: thêm nút SAVE and continue tước đó đã có nút back,delete  và reset trong form sẵn rồi trong \Magento\Backend\Block\Widget\Form\Container
         $this->buttonList->add(
             'saveandcontinue',
             [

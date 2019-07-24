@@ -3,14 +3,14 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="AHT_Blog::blog" title="Blog" sortOrder="3">
-                    <resource id="AHT_Blog::post" title="Post" sortOrder="10"/>
-                    <resource id="AHT_Blog::blog_configuration" title="Configuration" sortOrder="99" />
+                <resource id="AHT_AddPassword::addpassword" title="AddPassword" sortOrder="2">
+                    <resource id="AHT_AddPassword::customer" title="Customer" sortOrder="10"/>
+                    <resource id="AHT_AddPassword::addpassword_configuration" title="Configuration" sortOrder="99" />
                 </resource>
                 <resource id="Magento_Backend::stores" sortOrder="3">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="AHT_Blog::blog_config" title="Blog"/>
+                            <resource id="AHT_AddPassword::addpassword_config" title="addpassword"/>
                         </resource>
                     </resource>
                 </resource>
