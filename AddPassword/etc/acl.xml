@@ -4,16 +4,16 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="AHT_AddPassword::addpassword" title="AddPassword" sortOrder="2">
-                    <resource id="AHT_AddPassword::customer" title="Customer" sortOrder="10"/>
-                    <resource id="AHT_AddPassword::addpassword_configuration" title="Configuration" sortOrder="99" />
+                    <resource id="AHT_AddPassword::customer" title="Customer" sortOrder="11"/>
+                    <!-- <resource id="AHT_AddPassword::addpassword_configuration" title="Configuration" sortOrder="99" /> -->
                 </resource>
-                <resource id="Magento_Backend::stores" sortOrder="3">
+                <!-- <resource id="Magento_Backend::stores" sortOrder="3">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
                             <resource id="AHT_AddPassword::addpassword_config" title="addpassword"/>
                         </resource>
                     </resource>
-                </resource>
+                </resource> -->
             </resource>
         </resources>
     </acl>
