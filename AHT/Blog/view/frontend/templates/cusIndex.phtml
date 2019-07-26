@@ -1,0 +1,41 @@
+<?php
+/**
+ *  @var \AHT\Blog\Block\CustomerIndex $block
+ */
+// echo $block->getBlogInfo();
+	echo ("hello");
+?> 
+<table class="table table-bordered table-striped table-hover table-reponsive scroll">
+    <thead>
+    	<a href="<?php echo $block->getBaseUrl(); ?>blog/index/create" class="btn btn-primary btn-xs pull-right">Create New Post</a>
+	  	<tr>
+		    <th>Id</th>
+		    <th>Name</th>
+			<th width =" 20%" >Password</th>
+		    <th ><span class="dashicons dashicons-email">Email</span></th>
+		    <th>Creared At</th>
+			<th>Updated At</th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+	    </tr>
+    </thead>
+    <?php
+	$customers = $block->getPosts();
+	
+    foreach ($customers as $c) {
+		
+    	echo "<tr style=\"border: 1px solid #dddddd; text-align: left; padding: 8px;\">";
+    	echo "<td>".$c->getId()."</td>";
+    	echo "<td>".$c->getName()."</td>";
+		echo "<td>".$c->getPasswordHash()."</td>";
+    	echo "<td>".$c->getEmail()."</td>";
+    	echo "<td>".$c->getCreatedAt()."</td>";
+		echo "<td>".$c->getUpdatedAt()."</td>";
+		echo "<td><a href='".$block->getBaseUrl()."blog/index/cuschange?cus_id=".$c->getId()."'>ChangePassword</a></td>";
+		echo "<td><a href='".$block->getBaseUrl()."blog/index/cusedit?cus_id=".$c->getId()."'>Edit</a></td>";
+    	echo "<td><a href='".$block->getBaseUrl()."blog/index/cusdelete?cus_id=".$c->getId()."'>Delete</a></td>";
+    	echo "</tr>";
+    }
+    ?>
+</table>
