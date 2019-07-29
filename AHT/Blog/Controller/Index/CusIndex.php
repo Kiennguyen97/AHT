@@ -1,6 +1,6 @@
 <?php
 namespace AHT\Blog\Controller\Index;
-class CusIndex extends \Magento\Framework\App\Action\Action{
+class Cusindex extends \Magento\Framework\App\Action\Action{
     protected $_pageFactory;
     protected $_postFactory;
     public function __construct(

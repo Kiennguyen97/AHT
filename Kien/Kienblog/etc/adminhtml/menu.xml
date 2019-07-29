@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>	
+		<add id="Kien_Kienblog::kien" 
+      	title="Kien" 
+      	translate="title" 
+      	module="Kien_Kienblog" 
+      	sortOrder="51" 
+      	dependsOnModule="Kien_Kienblog"
+      	resource="Kien_Kienblog::kien"/>
+
+        <add id="Kien_Kienblog::cu" 
+      	title="Customer" 
+      	translate="title" 
+      	module="Kien_Kienblog" 
+      	parent="Kien_Kienblog::kien" 
+      	sortOrder="9"
+        action="post/index/index"
+      	dependsOnModule="Kien_Kienblog" 
+      	resource="Kien_Kienblog::cu"/>
+        
+    </menu>
+</config>

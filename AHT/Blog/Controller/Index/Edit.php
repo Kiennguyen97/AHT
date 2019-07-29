@@ -30,6 +30,7 @@ class Edit extends \Magento\Framework\App\Action\Action
 	public function execute()
 	{
 		$post_id = $this->getRequest()->getParam('post_id');
+		
 		//TODO: có thể làm thế này
 		//  $post_id = $_GET['post_id'];
 		$this->_coreRegistry->register('post_id', $post_id);

@@ -1,7 +1,7 @@
 <?php
 namespace AHT\Blog\Controller\Index;
 
-class Edit extends \Magento\Framework\App\Action\Action
+class Cusedit extends \Magento\Framework\App\Action\Action
 {
 	protected $_pageFactory;
 
@@ -17,7 +17,7 @@ class Edit extends \Magento\Framework\App\Action\Action
 		// \AHT\Blog\Model\PostFactory $postFactory,
         // \AHT\Blog\Model\PostRepository $postRepository,
         \Magento\Customer\Model\CustomerFactory $customerFactory,
-        \Magento\Customer\Model\PostRepository $customerRepository,
+        \Magento\Customer\Model\ResourceModel\CustomerRepository $customerRepository,
 		\Magento\Framework\Registry $coreRegistry
 		)
 	{
@@ -34,6 +34,9 @@ class Edit extends \Magento\Framework\App\Action\Action
 		$cus_id = $this->getRequest()->getParam('cus_id');
 		//TODO: có thể làm thế này
 		//  $post_id = $_GET['post_id'];
+		// $customer = $this->_customerRepository->getById($cus_id);
+		// echo ($customer->getFirstName()); 
+		// exit;
 		$this->_coreRegistry->register('cus_id', $cus_id);
 		return $this->_pageFactory->create();
 	}

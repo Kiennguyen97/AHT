@@ -1,6 +1,6 @@
 <?php
 namespace AHT\Blog\Block;
-class CusIndex extends \Magento\Framework\View\Element\Template
+class Cusindex extends \Magento\Framework\View\Element\Template
 {	
 	
 	protected $_customerCollectionFactory;
@@ -14,7 +14,7 @@ class CusIndex extends \Magento\Framework\View\Element\Template
         $this->_customerCollectionFactory = $customerCollectionFactory;    
         parent::__construct($context);
     }
-    public function getPosts(int $num = self::PAGESIZE)
+    public function getCustomers(int $num = self::PAGESIZE)
     {	
         $collection = $this->_customerCollectionFactory->create(); //tạo object productcollection
         $collection->addAttributeToSelect('*');
